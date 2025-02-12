@@ -1,3 +1,5 @@
+// import Quagga from 'quagga';
+
 const video = document.getElementById('camera-feed');
 const startButton = document.getElementById('start-camera');
 const stopButton = document.getElementById('stop-camera');
@@ -9,7 +11,14 @@ let captureInterval;
 
 startButton.addEventListener('click', async () => {
     try {
-        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        const stream = await navigator.mediaDevices.getUserMedia(
+            { 
+                video: {
+                width: { min: 1024, ideal: 1280, max: 1920 },
+                height: { min: 576, ideal: 720, max: 1080 }, 
+                }
+            }
+        );    
         video.srcObject = stream;
 
         // Start capturing images every 1 second
@@ -85,6 +94,12 @@ function parseBarcode(imageDataUrl) {
                         'i2of5_reader',
                         '2of5_reader',
                         'code_93_reader'], // Add supported barcode types
+                    },
+                    debug: {
+                        drawBoundingBox: false,
+                        showFrequency: false,
+                        drawScanline: false,
+                        showPattern: false
                     },
                     locate: true,
                     src: imageUrl,
