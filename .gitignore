@@ -1,0 +1,98 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Logs
+logs
+*.log
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+.log/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+dist/
+build/
+.cache/
+.out/
+.next/
+.vercel/
+serverless/
+storybook-static/
+coverage/
+.tmp/
+.vscode-test/
+.docusaurus/
+
+# Editor and OS-specific files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo
+
+# Jest
+jest/
+coverage/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+.nyc_output/
+
+# ESLint
+.eslintcache
+
+# Bower components
+bower_components/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+
+# PM2 Logs
+.pm2/
+
+# Sentry sourcemaps
+.sentryclirc
+.sourcemaps/
+
+# Firebase
+.firebase/
+firestore.indexes.json
+firestore.rules
+storage.rules
+
+# Prisma
+prisma/.dev.db
+prisma/migrations/
+
+# TurboRepo
+turbo/
+
+# Other
+*.sqlite
+*.sqlite3
+*.pid
+*.seed
+*.bak
