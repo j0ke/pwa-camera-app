@@ -6,6 +6,7 @@ const stopButton = document.getElementById('stop-camera');
 const canvas = document.getElementById('canvas');
 const capturedImagesContainer = document.getElementById('captured-images');
 const barcodeResult = document.getElementById('barcode-result');
+const barcodeLastResult = document.getElementById('barcode-lastresult');
 
 let captureInterval;
 
@@ -108,6 +109,7 @@ function parseBarcode(imageDataUrl) {
                 (result) => {
                     if (result && result.codeResult) {
                         barcodeResult.textContent = `Barcode: ${result.codeResult.code}`;
+                        barcodeLastResult.textContent = `Barcode: ${result.codeResult.code}`;
                     } else {
                         barcodeResult.textContent = 'No barcode detected.';
                     }
